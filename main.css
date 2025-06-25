@@ -1,0 +1,639 @@
+/* Reset CSS */
+/* Đây là Cmt trong CSS */
+
+/* Lớp giả - toàn cục */
+:root{
+    /* Màu sắc */
+    --website-final-color:#3d3d3d;
+    --website-final-white: #ffffff;
+    --website-final-red: #ff4757;
+    --website-final-green: #218c74;
+    --website-final-blue-light: #34ace0;
+
+    --website-final-hover: #f1f2f6;
+    --website-final-hover-dark: #d1ccc0;
+    /* Height website */
+    --website-navbar-height: 46px;
+    --website-navbar-a-min-width: 160px;
+
+    --website-content-width: 800px;
+    --website-content-padding-shared: 64px;
+    /* Font size 1rem = 16px */
+    --website-font-size-final: 1rem; 
+
+    /* Border */
+    --website-border: 10px;
+}
+
+/* " * " reset tất cả các thẻ trong html*/
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box; /* Là w + h bao gồm cả nội dung - padding - border...*/
+}
+
+/* Tác dụng lên tất cả thuộc tính trên h */
+html {
+    /* Hành vị khi cuộn */
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Thẻ Body --  */
+body {
+    
+}
+
+/* ---------------------------- */
+/* ---------------------------- */
+/* Class dùng chung */
+
+/* Clear - thuộc tính CSS Float */
+.clean-float{
+    clear: both; 
+}
+
+.row {
+    /* hoặc padding: 0 -8px; */
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.column-half {
+    width: 50%;
+}
+
+.column-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+/* Main chính */
+#main{
+
+}
+
+/* ---------------------------- */
+/* Id - Header */
+#header{
+    z-index: 1; /* Giá trị càng lớn thì sẽ ưu tiên */
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--website-navbar-height);
+    background-color: var(--website-final-color);
+}
+
+/* Nav trong Header */
+#navbar {
+    display: inline-block;
+}
+
+/* CSS của cả 2 id và clss này */
+#navbar, .subnav {
+    list-style-type: none; /* Loại bỏ style mặc định của ul - li */
+}
+
+/* Lí do navbar li là CSS cho con của thằng navbar (tránh trùng) */
+#navbar li {
+    position: relative;
+}
+
+#navbar > li {
+    display: inline-block; /* inline - trên một hàng -- block giữ một khối */
+}
+
+#navbar .subnav a {
+    padding: 0 12px;
+
+    color: var(--website-final-color);
+    line-height: 30px;
+}
+
+#navbar .subnav {
+    display: none; /* Display - Hiển thị */
+    position: absolute;
+    min-width: var(--website-navbar-a-min-width); /* Chiều ngang tối thiểu */
+    background-color: var(--website-final-white);
+
+    /* thông số -- h(x) v(y) blur spread color */
+    box-shadow: 3px 0 10px rgba(116, 125, 140,0.3);
+}
+
+#navbar .subnav a {
+    display: block;
+    color: var(--website-font-size-final);
+}
+
+#navbar .subnav li:hover {
+    background-color: var(--website-final-hover);
+    color: var(--website-final-color);
+}
+
+/* Css theo cấp con */
+/* Thẻ li là con trực tiếp của navbar -- thẻ a là con trực tiếp li  */
+#navbar > li > a {
+    color: var(--website-final-white);
+    text-transform: uppercase; /* Viết hoa chữ trong CSS */
+}
+
+#navbar li a {
+    padding-left: 24px; /* Đệm - Padding -- hoặc padding: 0 24px; */
+    padding-right: 24px;
+
+    font-size: var(--website-font-size-final);
+    text-decoration: none; /* Bỏ gạch chân ở thuộc tính text */
+    line-height: var(--website-navbar-height); /* Khoảng đứng của chữ */
+}
+
+#navbar > li:hover > a {
+    display: inline-block;
+
+    background-color: var(--website-final-hover);
+    color: var(--website-final-color);
+}
+
+#navbar li:hover .subnav {
+    display: block;
+}
+
+#navbar .icon-down {
+    font-size: 0.8rem;
+}
+
+#header .search-btn {
+    display: inline-block;
+    float: right;
+    padding: 0 20px;
+}
+
+#header .search-btn:hover {
+    background-color: var(--website-final-red);
+    cursor: pointer;
+}
+
+#header .search-icon{
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: var(--website-navbar-height);
+    color: var(--website-final-white);
+}
+
+/* ---------------------------- */
+/* ---------------------------- */
+
+
+/* ---------------------------- */
+/* ---------------------------- */
+
+/* Id - Slider */
+#slider{
+    margin-top: var(--website-navbar-height);
+    padding-top: 50%;
+
+    position: relative;
+
+    background-image: url(./assets/img/img.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    right: 0; left: 0;
+    text-align: center;
+    color: var(--website-final-white);
+}
+#slider .text-heading{
+
+}
+
+#slider .text-description{
+
+}
+
+
+/* ---------------------------- */
+/* ---------------------------- */
+
+/* Id - Content */
+#content{
+    
+}
+
+#content .content-section{
+    width: var(--website-content-width);
+    margin: 0 auto;
+    padding: var(--website-content-padding-shared) 0;
+    color: var(--website-final-color);
+}
+
+#content .section-heading,
+#content .section-sub-heading{
+    text-align: center;
+    
+}
+
+#content .section-heading {
+    
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 4px; /* Khoảng cách chữ */
+    text-transform: uppercase;
+}
+
+#content .section-sub-heading{
+    margin: 25px 0;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text{
+    font-size: 1rem;
+    margin: 25px 0;
+    text-align: justify; /* căn đều chữ */
+    line-height: 1.5;   /* Chỉnh độ cao của một dòng */
+    
+}
+
+
+#content .members-list{
+    /* Khi dùng float - nên dùng đính kèm overflow: hidden */
+    /* Float làm cha bị xẹp – overflow: hidden là miếng độn cho cha đứng lên 😆  */
+    /* overflow: hidden; */
+
+
+}
+
+#content .member-items{
+    /* Khi dùng float thì các phần tử sẽ bị mất khối 👆🏼*/
+    float: left;
+    width: 33.333333%;
+    text-align: center;
+}
+
+#content .member-name{
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+#content .member-avatars{
+    width: 60%;
+    height:180px;
+    object-fit: cover; /* Cho ảnh tràn viền */
+
+    border-radius: 4px;
+}
+
+#content .tour-section{
+    background-color:var(--website-final-color);
+}
+
+#content .tour-color {
+    color: var(--website-final-white) !important;
+}
+
+.ticket-list{
+    background-color: var(--website-final-white);
+
+    margin-top: 40px;
+}
+
+.ticket-list li {
+    padding: 11px 16px;
+    border-bottom: 0.5px solid var(--website-final-color);
+    font-size: 1rem;
+    list-style-type: none;
+}
+
+.ticket-list .sold-out{
+    padding: 3px 4px;
+    margin-left: 16px;
+    background-color: var(--website-final-red);
+    color: var(--website-final-white);
+
+}
+
+.ticket-list .quantity{
+    float: right; margin: -2px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--website-final-color);
+    color: var(--website-final-white);
+    border-radius: 100%;
+    line-height: 24px;
+    text-align: center;
+
+    font-size: 0.8rem;
+}
+
+/* Places */
+.places-full {
+    margin-bottom: 48px;
+}
+
+.places-list {
+    margin-top: 32px;
+    /* margin-left: -8px;
+    margin-right: -8px; */
+}
+
+.places-item {
+    /* float: left; */
+    width: 33.33333%;
+    /* padding: 0 8px; */
+}
+
+.places-img {
+    width: 100%;
+    display: block;
+}
+
+.places-img:hover {
+    opacity: 0.7;
+}
+
+.places-content {
+    background-color: var(--website-final-white);
+    padding: 16px;
+
+    font-size: 1rem;
+}
+
+.places-times, .descriptions, .places-buy-btn,
+.places-heading {
+    margin: 15px 0;
+}
+
+.places-heading {
+
+}
+
+.places-times {
+
+}
+
+.descriptions {
+
+}
+
+.places-buy-btn {
+    display: inline-block;
+    background-color: var(--website-final-color);
+    color: var(--website-final-white);
+    padding: 11px 16px;
+    border: none
+}
+
+.places-buy-btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+/* ---------------------------- */
+
+.model {
+
+    position: fixed;
+    
+    top: 0; right: 0; left: 0; bottom: 0;
+    background-color: rgba(61, 61, 61, 0.4);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    display: flex;
+}
+
+.model-container {
+    position: relative;
+    min-height: 200px;
+    width: 900px;
+    background-color: var(--website-final-white);
+
+    /* Animations */
+    animation: modelFadeIn ease 0.5s;
+}
+
+.model-container .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2rem;
+    color: var(--website-final-white);
+    font-weight: bold;
+
+    height: 52px;
+    width: 52px;
+
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.model-container .close:hover {
+    cursor: pointer;
+    background-color: var(--website-final-hover);
+    color: var(--website-final-color);
+}
+
+.model-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--website-final-green);
+    height: 130px;
+
+    color: var(--website-final-white);
+    font-size: 2.3rem;
+    /* margin-bottom: 16px; */
+}
+
+.model-header-text {
+    padding-left: 16px;
+    letter-spacing: 4px;
+}
+
+.model-body {
+    padding: 16px;
+}
+
+.model-label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.model-input {
+    width: 100%;
+    border: 0.5px solid var(--website-final-color);
+    font-size: 1rem;
+    height: 54px;
+    margin-bottom: 24px;
+
+    padding: 10px;
+}
+
+#buy-ticket {
+    margin: 15px 0;
+    height: 54px;
+    width: 100%;
+    border: none;
+    background-color: var(--website-final-green);
+    color: var(--website-final-white);
+    font-size: 1rem;
+}
+
+.form-submit-btn:hover,
+.model-close-footer:hover,
+#buy-ticket:hover {
+    background-color: var(--website-final-hover-dark);
+    color: var(--website-final-color);
+
+    cursor: pointer;
+}
+
+.model-footer {
+    width: 100%;
+    padding: 16px;
+    
+}
+
+.model-close-footer {
+    float: left;
+    height: 52px;
+    width: 120px;
+    font-size: 1rem;
+    border: none;
+    padding: 16px;
+    color: var(--website-final-white);
+    background-color: var(--website-final-red);
+}
+
+.model-btn-close-footer {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+.model-help {
+    float: right;
+    font-size: 1rem;
+    padding: 16px 0;
+}
+
+.footer-title-help{
+    color: var(--website-final-blue-light);
+}
+
+/* Animation - TICKETS */
+@keyframes modelFadeIn {
+    /* Từ đâu */
+    from {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    /* đến đâu */
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.contact-row {
+    margin: 48px 0;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--website-final-color);
+}
+
+.info-icon{
+    width: 32px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 1rem;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 0.5px solid var(--website-final-color);
+    width: 100%;
+}
+
+.form-submit-btn {
+    float: right;
+    font-size: 1rem;
+    padding: 8px 16px;
+    background-color: var(--website-final-color);
+    color: var(--website-final-white);
+    border: none;
+    text-transform: uppercase;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+/* Id - Footer */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 1.6rem;
+    
+}
+
+#footer .copy-right a,
+#footer .social-list a {
+    color: var(--website-final-color);
+    text-decoration: none;
+}
+
+#footer .copy-right a:hover,
+#footer .social-list a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#footer .copy-right {
+    color: var(--website-final-color);
+    font-size: 1rem;
+}
+

@@ -3,13 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Template</title>
+    <title>Website Template First</title>
+
+    <!-- Icons của website -->
+    <link rel="icon" href="./assets/svg/favo-music.svg">
+    
     <!-- Font Chữ `https://fonts.google.com/specimen/Roboto` -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    
 </head>
 <body>
-    
+    <!-- wrapper (app - main) - là ứng dụng - chứa cả ứng dụng - bao bọc -->
+    <div id="main">
+        <!-- Đầu trang - Header -->
+        <div id="header">
+            <ul id="navbar">
+                <li ><a href="#">Home</a></li>
+                <li ><a href="#band">Band</a></li>
+                <li ><a href="#tour">Tour</a></li>
+                <li ><a href="#contact">Contact</a></li>
+                <li >
+                    <a href="#">
+                        More
+                        <!-- icons -->
+                        <span class="icon-down ti-angle-down"></span>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- BEGIN - Search Button -->
+            <div class="search-btn">
+                <span class="search-icon ti-search"></span>
+            </div>
+        </div>
+        
+        <!-- Thẻ slider -->
+        <div id="slider">
+            <div class="text-content">
+                <h1 class="text-heading">
+                    Los Angeles
+                </h1>
+                <div class="text-description">
+                    We had the best time playing at Venice Beach!
+                </div>
+            </div>
+        </div>
+
+        <!-- Nội dung - Thẻ content hoặc container -->
+        <div id="content">
+
+            <!-- The Band -->
+            <!-- The Band -->
+            <!-- The Band -->
+            <div id="band" class="content-section">
+                <h2 class="section-heading">The Band</h2>
+                <p class="section-sub-heading">We love music</p>
+                <p class="about-text">We have created a fictional band website.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div class="members-list">
+                    <div class="member-items">
+                        <p class="member-name">Lisa</p>
+                        <img
+                            src="./assets/img/lisa.webp"
+                            alt="Lisa-BlackPink" class="member-avatars"
+                        >
+                    </div>
+                
+                    <div class="member-items">
+                        <p class="member-name">CL</p>
+                        <img
+                            src="./assets/img/cl.jpg"
+                            alt="CL" class="member-avatars"
+                        >
+                    </div>
+                    
+                    <div class="member-items">
+                        <p class="member-name">LyHan</p>
+                        <img
+                            src="./assets/img/lyhan.webp"
+                            alt="Lyhan" class="member-avatars"
+                        >
+                    </div>
+                </div>
+                <!-- 
+                    Lý do dùng cái này là vì
+                    Float làm cha bị xẹp – overflow: hidden là miếng độn cho cha đứng lên 😆
+                    Mở CSS lên đối chiếu là sẽ thấy‼️
+
+                    Hoặc có thể dùng overflow: hidden;
+                -->
+                <div class="clean-float"></div>
+            </div>
+
+            <!-- Tour Dates -->
+            <!-- Tour Dates -->
+            <!-- Tour Dates -->
+            <div id="tour" class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading tour-color">Tour Dates</h2>
+                    <p class="section-sub-heading tour-color">Remember to book your tickets!</p>
+                    
+                    <!-- Ticket Sold out -->
+                    <ul class="ticket-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+
+                    <!-- Places -->
+                     <!-- Có 2 class - class row có padding: -->
+                    <div class="places-full">
+                        <div class="row places-list">
+                            <div class="column places-item">
+                                <img src="./assets/img/newyork.jpg" alt="" class="places-img">
+                                <div class="places-content">
+                                    <h3 class="places-heading">New York</h3>
+                                    <p class="places-times">Fri 27 Nov 2016</p>
+                                    <p class="descriptions">
+                                        Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                    </p>
+                                    <button class="places-buy-btn js-buy-tickets">Buy Tickets</button>
+                                </div>
+                            </div>
+
+                            <div class="column places-item">
+                                <img src="./assets/img/paris.jpg" alt="" class="places-img">
+                                <div class="places-content">
+                                    <h3 class="places-heading">Paris</h3>
+                                    <p class="places-times">Sat 28 Nov 2016</p>
+                                    <p class="descriptions">
+                                        Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                    </p>
+                                    <button class="places-buy-btn js-buy-tickets">Buy Tickets</button>
+                                </div>
+                            </div>
+
+                            <div class="column places-item">
+                                <img src="./assets/img/sanfran.jpg" alt="" class="places-img">
+                                <div class="places-content">
+                                    <h3 class="places-heading">San Francisco</h3>
+                                    <p class="places-times">Sun 29 Nov 2016</p>
+                                    <p class="descriptions">
+                                        Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                                    </p>
+                                    <button class="places-buy-btn js-buy-tickets">Buy Tickets</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clean-float"></div>
+                </div>
+            </div>
+
+            <!-- CONTACT -->
+            <!-- CONTACT -->
+            <!-- CONTACT -->
+            <div id="contact" class="content-section">
+                <h2 class="section-heading">Contact</h2>
+                <p class="section-sub-heading">Fan? Drop a note!</p>
+
+                <div class="row contact-row">
+                    <div class="column column-half contact-info">
+                        <p>
+                            <i class="ti-location-pin info-icon"></i>
+                            Chicago, US
+                        </p>
+                        
+                        <p>
+                            <i class="ti-mobile info-icon"></i>
+                            Email: mail@mail.com
+                        </p>
+
+                        <p>
+                            <i class="ti-email info-icon"></i>
+                            Chicago, US
+                        </p>
+                    </div>
+
+                    <div class="column column-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="column column-half">
+                                    <input id="name" type="text" required class="form-control" placeholder="Name">
+                                </div>
+
+                                <div class="column column-half">
+                                    <input id="mail" type="email" required class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="column column-full">
+                                    <input id="message" type="text" required class="form-control" placeholder="Message">
+                                </div>
+                            </div>
+                            <input class="mt-16 form-submit-btn" type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="map-section">
+                <img src="./assets/img/lisa-cover.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- Chân trang - footer -->
+        <div id="footer">
+            <div class="social-list">
+                <a href="#"><i class="ti-facebook"></i></a>
+                <a href="#"><i class="ti-instagram"></i></a>
+                <a href="#"><i class="ti-themify-favicon-alt"></i></a>
+                <a href="#"><i class="ti-pinterest-alt"></i></a>
+                <a href="#"><i class="ti-twitter-alt"></i></a>
+                <a href="#"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copy-right mt-16">
+                Powered by <a href="">w3.css</a>
+            </p>
+        </div>
+        
+        <!-- Lớp phủ -->
+        <div class="model js-model">
+            <div class="model-container js-model-container">
+                <div class="close js-model-close">
+                    <i class="ti-close"></i>
+                </div>
+
+                <header class="model-header">
+                    <i class="ti-ticket"></i>
+                    <span class="model-header-text">Tickets</span>
+                </header>
+
+                <div class="model-body">
+                    <!-- Label có for để focus vào input qua ID của thẻ input -->
+                    <label for="tickets-quantity" class="model-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="tickets-quantity" type="text" class="model-input" placeholder="How many?">
+                
+                    <label for="tickets-email" class="model-label">
+                        <i class="ti-user"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="tickets-email" type="text" class="model-input" placeholder="Send To">
+                    
+                    <button id="buy-ticket">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+
+                <footer class="model-footer">
+                    <button class="model-close-footer js-model-close">
+                        Close
+                        <i class="ti-close model-btn-close-footer"></i>
+                    </button>
+                    <p class="model-help">
+                        Need
+                        <a href="" class="footer-title-help">help?</a>
+                    </p>
+
+                    <div class="clean-float"></div>
+                </footer>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="./actions.js"></script>
 </body>
 </html>
