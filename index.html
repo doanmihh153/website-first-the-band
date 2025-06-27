@@ -12,9 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./assets/styles/responsive.css">
+    
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
     <!-- wrapper (app - main) - là ứng dụng - chứa cả ứng dụng - bao bọc -->
@@ -43,6 +45,10 @@
             <!-- BEGIN - Search Button -->
             <div class="search-btn">
                 <span class="search-icon ti-search"></span>
+            </div>
+
+            <div id="menu-mobile" class="menu-mobile-btn">
+                <span class="menu-icon ti-menu"></span>
             </div>
         </div>
         
@@ -76,7 +82,7 @@
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="members-list">
-                    <div class="member-items">
+                    <div class="member-items member-items-mobile">
                         <p class="member-name">Lisa</p>
                         <img
                             src="./assets/img/lisa.webp"
@@ -84,7 +90,7 @@
                         >
                     </div>
                 
-                    <div class="member-items">
+                    <div class="member-items member-items-mobile">
                         <p class="member-name">CL</p>
                         <img
                             src="./assets/img/cl.jpg"
@@ -92,7 +98,7 @@
                         >
                     </div>
                     
-                    <div class="member-items">
+                    <div class="member-items member-items-mobile">
                         <p class="member-name">LyHan</p>
                         <img
                             src="./assets/img/lyhan.webp"
@@ -178,7 +184,7 @@
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
                 <div class="row contact-row">
-                    <div class="column column-half contact-info">
+                    <div class="column col-full-mb column-half contact-info">
                         <p>
                             <i class="ti-location-pin info-icon"></i>
                             Chicago, US
@@ -195,14 +201,14 @@
                         </p>
                     </div>
 
-                    <div class="column column-half contact-form">
+                    <div class="column col-full-mb column-half contact-form m-mb-8">
                         <form action="">
                             <div class="row">
-                                <div class="column column-half">
+                                <div class="column col-full-mb column-half">
                                     <input id="name" type="text" required class="form-control" placeholder="Name">
                                 </div>
 
-                                <div class="column column-half">
+                                <div class="column col-full-mb m-mb-4 column-half">
                                     <input id="mail" type="email" required class="form-control" placeholder="Email">
                                 </div>
                             </div>

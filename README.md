@@ -43,6 +43,8 @@
 
 **‼️Đây là thư mục mẫu!**
 
+### Media Queries - chuỗi truy vấn của css - theo dõi màn hình
+
 #### Muốn gõ được mấy dấu `├──` hoặc `└──` hoặc `│` có thể copy và paste
 
 [Hoặc đọc thêm tại đây!](https://tree.nathanfriend.io)

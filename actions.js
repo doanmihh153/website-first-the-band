@@ -43,3 +43,42 @@ function handleRemoveEventFoamy(event) {
 
 modelContainer.addEventListener('click', handleRemoveEventFoamy);
 
+
+// Responsive - Mobile - Menu
+// Đóng mở menu trên di động
+const header = document.getElementById('header');
+const headerMenuMobile = document.getElementById('menu-mobile');
+
+const headerHeight = header.clientHeight;
+
+headerMenuMobile.onclick = function () {
+    // Lấy chiều cao - so sánh với chiều cao của header:
+    const isClose = header.clientHeight === headerHeight;
+
+    if (isClose) {
+        header.style.height = 'auto';
+    } else {
+        header.style.height = null;
+    }
+};
+
+// Lắng nghe sự kiện đóng mở
+const menuItems = document.querySelectorAll('#navbar li a[href*="#"]');
+
+for (let i = 0; i < menuItems.length; i++) {
+    const menuItem= menuItems[i];
+    // lắng nghe sự kiện:
+    menuItem.onclick = function (event) {
+        // Nếu có anh chị em liền kề và nếu trong nó có class subnav thì là menu con
+        // Kiểm tra xem menuItem có phải là menu con không
+        const isParent = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+    
+        if (isParent) {
+            event.preventDefault(); // Ngăn chặn sự kiện mặc định nếu là menu con
+        } else {
+            console.log(menuItem);
+            header.style.height = null; // Đóng menu khi click vào menu item
+        };
+        // Nếu là menu con thì không làm gì cả};
+    };
+};

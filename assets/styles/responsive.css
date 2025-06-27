@@ -1,0 +1,176 @@
+/* 😂 BREAK POINT */
+
+/* ✅ Đây là Responsive - Theo dõi màn hình */
+
+/* ‼️ Có 2 giá trị:
+    - max-width: Kích thước tối đa - nhỏ hơn hoặc bằng
+    - min-width: Kích thước tối thiểu -  lớn hơn hoặc bằng
+*/
+
+/* 
+    ✅ Các kích thước 🙃
+    ✅  PC >= 1024px
+    ✅  Tablet >= 768px
+    ✅  Mobile >= 480px
+*/
+
+/* PC - RESPONSIVE */
+@media (min-width: 1024px) {
+    
+}
+
+/* TABLET - RESPONSIVE */
+@media (max-width: 768px) and (max-width: 1023px) {
+    
+    #slider {
+        padding-top: 100%
+    }
+    /* Content */
+    
+    /* #navbar {
+        height: 72px;
+    } */
+
+    #content .content-section {
+        /* TABLET - RESPONSIVE */
+        max-width: 100%;
+        padding: 32px 16px;
+    }
+    
+} 
+
+/* MOBILE - RESPONSIVE */
+@media (max-width: 766px) {
+
+    body {
+        font-size: 0.8rem; /* Giảm kích thước chữ */
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Giảm kích thước chữ */
+    }
+    /* Class dùng chung */
+    .col-full-mb {
+        width: 100%;
+    }
+
+    .m-mb-4 {
+        margin: 4px 0;
+    }
+
+    .m-mb-8 {
+        margin: 16px 0;
+    }
+
+    /* ------------------------------- */
+    #header {
+        overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+    }
+
+    #navbar {
+        display: block;
+    }
+
+    #navbar > li {
+        display: block;
+    }
+
+    #navbar > li > a {
+        width: 100%;
+    }
+    /* Lớp giả */
+    #navbar > li:first-child {
+        display: inline-block;
+    }
+
+    #navbar .subnav {
+        position: initial;
+        background-color: var(--website-final-color);
+    }
+
+    #navbar .subnav a {
+        color: var(--website-final-white);
+        padding: 4px 32px;
+        
+    }
+
+    #navbar .subnav a:hover {
+        color: var(--website-final-color);
+    }
+
+    #header .menu-mobile-btn {
+        display: block;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    /* Slide */
+
+    #slider {
+        padding-top: 100%
+    }
+
+    #slider .text-content {
+        padding: 10px 0;
+        bottom: 10px;
+    }
+
+    #slider .text-heading {
+        font-size: 1.6rem;
+        
+    }
+
+    #slider .text-description {
+        font-size: 0.8rem;
+        
+    }
+
+    /* Content */
+    #content #band {
+        padding: 30px 12px;
+    }
+
+    #content .member-items-mobile {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    #content .member-avatars {
+        width: 60%;
+        min-height: 380px;
+    }
+
+    #content .content-section {
+        padding: 40px 12px;
+    }
+
+    #contact .places-list{
+        
+    }
+
+    .places-item {
+        width: 100%;
+        padding: 8px 8px;
+    }
+
+
+    .places-buy-btn {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+    }
+
+    // Lớp phủ
+    /* .model-container {
+        margin: 12px 0
+    } */
+}
+

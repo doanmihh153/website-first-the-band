@@ -94,12 +94,14 @@ body {
 
 /* ---------------------------- */
 /* Id - Header */
-#header{
-    z-index: 1; /* Giá trị càng lớn thì sẽ ưu tiên */
+#header {
     position: fixed;
     top: 0; left: 0; right: 0;
     height: var(--website-navbar-height);
     background-color: var(--website-final-color);
+    
+    z-index: 1; /* Giá trị càng lớn thì sẽ ưu tiên */
+    
 }
 
 /* Nav trong Header */
@@ -180,7 +182,7 @@ body {
 }
 
 #header .search-btn {
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     padding: 0 20px;
 }
@@ -188,6 +190,32 @@ body {
 #header .search-btn:hover {
     background-color: var(--website-final-red);
     cursor: pointer;
+}
+
+#header .menu-mobile-btn {
+    display: none;
+    float: right;
+    padding: 0 20px;
+
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#header .menu-mobile-btn:hover {
+    background-color: var(--website-final-hover);
+    
+}
+
+#header .menu-icon:hover {
+    color: var(--website-final-color);
+}
+
+#header .menu-icon {
+    color: var(--website-final-white);
+    line-height: var(--website-navbar-height);
+    font-size: 1rem;
 }
 
 #header .search-icon{
@@ -244,11 +272,15 @@ body {
     
 }
 
-#content .content-section{
+#content .content-section {
+    margin: 30px 0;
     width: var(--website-content-width);
+    /* Max-width mạnh hơn */
     margin: 0 auto;
     padding: var(--website-content-padding-shared) 0;
     color: var(--website-final-color);
+    
+    
 }
 
 #content .section-heading,
