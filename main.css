@@ -669,3 +669,15 @@ body {
     font-size: 1rem;
 }
 
+
+/* Map */
+
+.map-section {
+    margin-top: var(--website-navbar-height);
+    padding-top: 70%;
+    position: relative;
+    background-image: url(./assets/img/lisa-cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
